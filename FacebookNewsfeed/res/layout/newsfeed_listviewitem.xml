@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:facebook="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingBottom="@dimen/com_dhsoftware_android_marginSize_normal">
+		
+	<com.facebook.widget.ProfilePictureView
+			android:id="@+id/com_dhsoftware_android_newsFeedItem_userProfilePicture"
+			android:layout_height="64dp"
+			android:layout_width="64dp"
+			android:layout_margin="@dimen/com_dhsoftware_android_marginSize_normal"
+			facebook:preset_size="normal" />
+	<RelativeLayout 
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content">
+	
+		<TextView
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_userName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/com_dhsoftware_android_marginSize_normal"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:text="User Name goes here"
+				android:textSize="@dimen/com_dhsoftware_android_textSize_big" />
+		
+		<TextView
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_via"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_userName"
+				android:layout_alignParentLeft="true"
+				android:text="via XXXXX app goes here"
+				android:textSize="@dimen/com_dhsoftware_android_textSize_normal" />
+		
+		<TextView
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_content"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_via"
+				android:layout_alignParentLeft="true"
+				android:layout_marginTop="@dimen/com_dhsoftware_android_marginSize_normal"
+				android:text="User content goes here"
+				android:textSize="@dimen/com_dhsoftware_android_textSize_normal"
+				android:autoLink="web" />
+	
+		<TextView
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_time"
+				style="@style/FacebookNewsfeedThemeBottomLineText"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_content"
+				android:layout_alignParentLeft="true"
+				android:text="HH:MM" />
+	
+		<TextView
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_comment_nr"
+				style="@style/FacebookNewsfeedThemeBottomLineText"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_content"
+				android:layout_alignParentRight="true" />
+		
+	    <ImageView 
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_comment_img"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/kupla"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_content"
+				android:layout_toLeftOf="@id/com_dhsoftware_android_newsFeedItem_comment_nr" />
+	<!-- 
+		<TextView
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_comment_img"
+				style="@style/FacebookNewsfeedThemeBottomLineText"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_content"
+				android:layout_toLeftOf="@id/com_dhsoftware_android_newsFeedItem_comment_nr"
+				android:text="_O" />
+	 -->
+		<TextView
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_like_nr"
+				style="@style/FacebookNewsfeedThemeBottomLineText"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_content"
+				android:layout_toLeftOf="@id/com_dhsoftware_android_newsFeedItem_comment_img" />
+		
+	    <ImageView 
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_like_img"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/sydan"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_content"
+				android:layout_toLeftOf="@id/com_dhsoftware_android_newsFeedItem_like_nr" />
+	<!-- 
+		<TextView
+				android:id="@+id/com_dhsoftware_android_newsFeedItem_like_img"
+				style="@style/FacebookNewsfeedThemeBottomLineText"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_below="@id/com_dhsoftware_android_newsFeedItem_content"
+				android:layout_toLeftOf="@id/com_dhsoftware_android_newsFeedItem_like_nr"
+				android:text="&lt;3" />
+	 -->
+	
+	
+	</RelativeLayout>
+	
+	<ImageView 
+			android:id="@+id/com_dhsoftware_android_newsFeedItem_arrow"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:src="@drawable/nuoli"
+		    android:layout_gravity="center_vertical"
+		    android:layout_marginRight="@dimen/com_dhsoftware_android_marginSize_normal" />
+	
+</LinearLayout>
