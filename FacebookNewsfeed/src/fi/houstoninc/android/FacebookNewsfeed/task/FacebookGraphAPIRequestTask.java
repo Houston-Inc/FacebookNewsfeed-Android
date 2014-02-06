@@ -1,14 +1,16 @@
-package com.dhsoftware.android.FacebookNewsfeedSample.tasks;
+package fi.houstoninc.android.FacebookNewsfeed.task;
 
 import android.os.AsyncTask;
-import com.dhsoftware.android.FacebookNewsfeedSample.model.GraphAPIRequest;
-import com.dhsoftware.android.FacebookNewsfeedSample.model.IRequestCallback;
-import com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem;
 import com.facebook.Request;
 import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.model.GraphObject;
 import com.facebook.model.GraphObjectList;
+
+import fi.houstoninc.android.FacebookNewsfeed.model.GraphAPIRequest;
+import fi.houstoninc.android.FacebookNewsfeed.model.IRequestCallback;
+import fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem;
+
 import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,8 +22,8 @@ import java.util.Comparator;
 
 /**
  * This distinct {@link android.os.AsyncTask AsyncTask} can be used to perform any sort of Graph API Request on Facebook.
- * All you've got to do is set a {@link com.dhsoftware.android.FacebookNewsfeedSample.model.IRequestCallback IRequestCallback} Interface so you're
- * notified of when your tasks are completed, and you'll receive an {@link java.util.ArrayList ArrayList} full of {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem INewsfeedItem}s
+ * All you've got to do is set a {@link fi.houstoninc.android.FacebookNewsfeed.model.IRequestCallback IRequestCallback} Interface so you're
+ * notified of when your tasks are completed, and you'll receive an {@link java.util.ArrayList ArrayList} full of {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem INewsfeedItem}s
  * for you tu use. Of course, you may also change and update this code in any way that suits your use of the Graph API. I just wanted to make it
  * as simple as possible to show a user's Newsfeed onscreen.
  * <br></br>
@@ -61,7 +63,7 @@ public class FacebookGraphAPIRequestTask extends AsyncTask<GraphAPIRequest, Inte
 	}
 
    /**
-    * This is the method performing all of this Tasks' work. It loops through all of the {@link com.dhsoftware.android.FacebookNewsfeedSample.model.GraphAPIRequest GraphAPIRequest}s and
+    * This is the method performing all of this Tasks' work. It loops through all of the {@link fi.houstoninc.android.FacebookNewsfeed.model.GraphAPIRequest GraphAPIRequest}s and
     * adds all the downloaded items into a list.
     */
    @Override

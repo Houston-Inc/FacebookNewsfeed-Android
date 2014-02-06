@@ -1,4 +1,4 @@
-package com.dhsoftware.android.FacebookNewsfeedSample.fragments;
+package fi.houstoninc.android.FacebookNewsfeed.fragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,11 +18,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.dhsoftware.android.FacebookNewsfeedSample.R;
-import com.dhsoftware.android.FacebookNewsfeedSample.adapters.NewsfeedItemAdapter;
-import com.dhsoftware.android.FacebookNewsfeedSample.model.GraphAPIRequest;
-import com.dhsoftware.android.FacebookNewsfeedSample.model.IRequestCallback;
-import com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem;
-import com.dhsoftware.android.FacebookNewsfeedSample.tasks.FacebookGraphAPIRequestTask;
 import com.facebook.Request;
 import com.facebook.Response;
 import com.facebook.Session;
@@ -33,6 +28,12 @@ import com.facebook.widget.LoginButton;
 import com.facebook.widget.ProfilePictureView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+
+import fi.houstoninc.android.FacebookNewsfeed.adapter.NewsfeedItemAdapter;
+import fi.houstoninc.android.FacebookNewsfeed.model.GraphAPIRequest;
+import fi.houstoninc.android.FacebookNewsfeed.model.IRequestCallback;
+import fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem;
+import fi.houstoninc.android.FacebookNewsfeed.task.FacebookGraphAPIRequestTask;
 
 /**
  * This is the meat of this sample. This {@link android.support.v4.app.Fragment Fragment} takes care of logging in to Facebook, asking for the
@@ -47,7 +48,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
  * <br></br>
  * Date: 4/23/13
  */
-public class MyNewsfeedFragment extends Fragment implements IRequestCallback {
+public class NewsfeedFragment extends Fragment implements IRequestCallback {
 	
 	public static int MAX_FB_LIKES_COUNT = 999;
 
@@ -84,7 +85,7 @@ public class MyNewsfeedFragment extends Fragment implements IRequestCallback {
    /**
     * This variable will hold the information of the logged in user. We need it to show the user's profile picture and his name.
     * As a class, {@link com.facebook.model.GraphUser GraphUser} is Facebook's clever way of relieving us 3rd-party developers from having to interact
-    * with all kinds of JSON properties. Check out my own {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem INewsfeedItem} documentation
+    * with all kinds of JSON properties. Check out my own {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem INewsfeedItem} documentation
     * or Facebook's for more.
     */
    private GraphUser mUser;
@@ -280,7 +281,7 @@ public class MyNewsfeedFragment extends Fragment implements IRequestCallback {
          // and prompt the system to make our Menu disappear
          setMenuVisibility(false);
       }
-       Log.d(MyNewsfeedFragment.class.getSimpleName(), "updateUI called.");
+       Log.d(NewsfeedFragment.class.getSimpleName(), "updateUI called.");
    }
 
    /**
@@ -298,7 +299,7 @@ public class MyNewsfeedFragment extends Fragment implements IRequestCallback {
                      // If the response is successful
                      if ((session == Session.getActiveSession()) && (user != null)) {
                         // we've got a user and we can update the UI
-                        MyNewsfeedFragment.this.mUser = user;
+                        NewsfeedFragment.this.mUser = user;
                         updateUI();
                         requestNewsfeed();
                      }
@@ -326,7 +327,7 @@ public class MyNewsfeedFragment extends Fragment implements IRequestCallback {
    }
 
    /**
-    * This method handles calling our {@link com.dhsoftware.android.FacebookNewsfeedSample.tasks.FacebookGraphAPIRequestTask FacebookGraphAPIRequestTask} to
+    * This method handles calling our {@link fi.houstoninc.android.FacebookNewsfeed.task.FacebookGraphAPIRequestTask FacebookGraphAPIRequestTask} to
     * request our user's Newsfeed off Facebook's API.
     */
    private void requestNewsfeed() {
@@ -349,9 +350,9 @@ public class MyNewsfeedFragment extends Fragment implements IRequestCallback {
    }
 
    /**
-    * This method is called by the {@link com.dhsoftware.android.FacebookNewsfeedSample.tasks.FacebookGraphAPIRequestTask FacebookGraphAPIRequestTask} when it's finished
+    * This method is called by the {@link fi.houstoninc.android.FacebookNewsfeed.task.FacebookGraphAPIRequestTask FacebookGraphAPIRequestTask} when it's finished
     * taking care of all our API Requests.
-    * @param obj An {@link java.util.ArrayList ArrayList} with the downloaded {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem INewsfeedItem}s.
+    * @param obj An {@link java.util.ArrayList ArrayList} with the downloaded {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem INewsfeedItem}s.
     */
    @Override
    public void requestCompleted(Object obj) {

@@ -1,4 +1,4 @@
-package com.dhsoftware.android.FacebookNewsfeedSample.adapters;
+package fi.houstoninc.android.FacebookNewsfeed.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,17 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import com.dhsoftware.android.FacebookNewsfeedSample.R;
-import com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem;
-import com.dhsoftware.android.FacebookNewsfeedSample.wrappers.NewsfeedItemWrapper;
+
+import fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem;
+import fi.houstoninc.android.FacebookNewsfeed.wrapper.NewsfeedItemWrapper;
 
 import java.util.List;
 
 /**
  *
- * To make code in the {@link com.dhsoftware.android.FacebookNewsfeedSample.fragments.MyNewsfeedFragment MyNewsfeedFragment} as simple as possible, I made
- * an adapter to show all the {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem INewsfeedItem}s we get through the API.
+ * To make code in the {@link fi.houstoninc.android.FacebookNewsfeed.fragment.NewsfeedFragment MyNewsfeedFragment} as simple as possible, I made
+ * an adapter to show all the {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem INewsfeedItem}s we get through the API.
  * Keep in mind we're not using a separate {@link java.util.ArrayList ArrayList} to hold the data; in this sample we're actually adding the data
- * directly into the adapter. Look at the {@link com.dhsoftware.android.FacebookNewsfeedSample.fragments.MyNewsfeedFragment MyNewsfeedFragment} code.
+ * directly into the adapter. Look at the {@link fi.houstoninc.android.FacebookNewsfeed.fragment.NewsfeedFragment MyNewsfeedFragment} code.
  * <br></br>
  * <br></br>
  * User: Dinesh Harjani (email: goldrunner18725@gmail.com) (github: the7thgoldrunner) (Twitter: @dinesharjani)
@@ -45,7 +46,7 @@ public class NewsfeedItemAdapter extends ArrayAdapter<INewsfeedItem> {
     * I overrode this method so the Newsfeed would show up right: keeping newest items at the top. For that,
     * all I had to do was invert access to the items in the {@link android.widget.Adapter Adapter}.
     * @param position the requested item's position
-    * @return the {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem INewsfeedItem} at the naturally-inverted position.
+    * @return the {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem INewsfeedItem} at the naturally-inverted position.
     */
    @Override
    public INewsfeedItem getItem(int position) {

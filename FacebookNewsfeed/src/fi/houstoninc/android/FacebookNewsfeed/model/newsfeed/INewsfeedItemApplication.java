@@ -1,11 +1,11 @@
-package com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed;
+package fi.houstoninc.android.FacebookNewsfeed.model.newsfeed;
 
 import com.facebook.model.GraphObject;
 
 /**
  *
  * A simple proxy Interface to access the supplied information of the Facebook App
- * through which a {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem INewsfeedItem} was posted.
+ * through which a {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem INewsfeedItem} was posted.
  * Keep in mind this may be null in some items.
  * <br></br>
  * <br></br>

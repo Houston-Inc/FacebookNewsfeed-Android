@@ -1,10 +1,10 @@
-package com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed;
+package fi.houstoninc.android.FacebookNewsfeed.model.newsfeed;
 
 import com.facebook.model.GraphObject;
 
 /**
  *
- * We want to display exactly who posted every {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem INewsfeedItem}, so we
+ * We want to display exactly who posted every {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem INewsfeedItem}, so we
  * require another Proxy to access their ID (to download their profile picture) and their Name.
  * <br></br>
  * <br></br>

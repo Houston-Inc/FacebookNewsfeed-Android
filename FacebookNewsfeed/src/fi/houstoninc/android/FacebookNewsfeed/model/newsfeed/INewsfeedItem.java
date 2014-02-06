@@ -1,4 +1,4 @@
-package com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed;
+package fi.houstoninc.android.FacebookNewsfeed.model.newsfeed;
 
 import com.facebook.model.GraphObject;
 
@@ -11,8 +11,8 @@ import com.facebook.model.GraphObject;
  * if you mess up the name of the "getter" this magical Facebook SDK method will throw you an Exception,
  * but if you do it'll save you a tooooooooonnnnn of code (no need to make a specific class translating
  * JSON properties to Java Objects).
- * Note: as you can see, you can "chain" these proxies: {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItemApplication INewsfeedItemApplication},
- * {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItemFrom INewsfeedItemFrom}, {@link com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItemVia}.
+ * Note: as you can see, you can "chain" these proxies: {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItemApplication INewsfeedItemApplication},
+ * {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItemFrom INewsfeedItemFrom}, {@link fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItemVia}.
  * * <br></br>
  * <br></br>
  * User: Dinesh Harjani (email: goldrunner18725@gmail.com) (github: the7thgoldrunner) (Twitter: @dinesharjani)

@@ -1,4 +1,4 @@
-package com.dhsoftware.android.FacebookNewsfeedSample.wrappers;
+package fi.houstoninc.android.FacebookNewsfeed.wrapper;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -10,9 +10,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dhsoftware.android.FacebookNewsfeedSample.R;
-import com.dhsoftware.android.FacebookNewsfeedSample.fragments.MyNewsfeedFragment;
-import com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed.INewsfeedItem;
 import com.facebook.widget.ProfilePictureView;
+
+import fi.houstoninc.android.FacebookNewsfeed.fragment.NewsfeedFragment;
+import fi.houstoninc.android.FacebookNewsfeed.model.newsfeed.INewsfeedItem;
 
 /**
  *
@@ -92,13 +93,13 @@ public class NewsfeedItemWrapper implements View.OnClickListener {
       if (item.getLikes() != null) {
     	  likes = item.getLikes().getData().size();
       }
-      getLikes().setText(" "+likes+(MyNewsfeedFragment.MAX_FB_LIKES_COUNT<=likes?"+":""));
+      getLikes().setText(" "+likes+(NewsfeedFragment.MAX_FB_LIKES_COUNT<=likes?"+":""));
       
       int comments = 0;
       if (item.getComments() != null) {
     	  comments = item.getComments().getData().size();
       }
-      getComments().setText(" "+comments+(MyNewsfeedFragment.MAX_FB_LIKES_COUNT<=comments?"+":""));
+      getComments().setText(" "+comments+(NewsfeedFragment.MAX_FB_LIKES_COUNT<=comments?"+":""));
       
       mRow.setOnClickListener(this);
       

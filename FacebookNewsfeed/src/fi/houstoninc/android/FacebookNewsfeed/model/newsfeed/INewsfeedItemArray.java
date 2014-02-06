@@ -1,4 +1,4 @@
-package com.dhsoftware.android.FacebookNewsfeedSample.model.newsfeed;
+package fi.houstoninc.android.FacebookNewsfeed.model.newsfeed;
 
 import com.facebook.model.GraphObject;
 import com.facebook.model.GraphObjectList;
