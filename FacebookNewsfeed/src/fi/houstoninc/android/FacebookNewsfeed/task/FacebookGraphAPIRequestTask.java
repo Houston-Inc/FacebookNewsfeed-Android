@@ -78,7 +78,7 @@ public class FacebookGraphAPIRequestTask extends AsyncTask<GraphAPIRequest, Inte
          Response response = graphApiRequest.executeAndWait();
          // we could also check here that our Session's valid; which is recommended in Facebook's own samples
          // in this sample's case, I check it in MyNewsfeedFragment just before adding the downloaded items to the Adapter
-         if (response != null) {
+         if (response != null && null != response.getGraphObject() && null != response.getGraphObject().getInnerJSONObject()) {
             // if we did get a response, we
             processResponse(response.getGraphObject().getInnerJSONObject());
          }
