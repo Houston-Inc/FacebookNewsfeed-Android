@@ -1,0 +1,6 @@
+[submodule "facebook-android-sdk"]
+	path = facebook-android-sdk
+	url = git@github.com:Houston-Inc/facebook-android-sdk.git
+[submodule "Android-PullToRefresh"]
+	path = Android-PullToRefresh
+	url = git@github.com:Houston-Inc/Android-PullToRefresh.git
